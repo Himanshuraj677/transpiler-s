@@ -341,165 +341,165 @@ measure q[0] -> c[0];"#,
         ),
     ];
 
-// let invalid_programs = [
-//     (
-//         "Invalid Character",
-//         r#"OPENQASM 2.0;
+    // let invalid_programs = [
+    //     (
+    //         "Invalid Character",
+    //         r#"OPENQASM 2.0;
 
-// @
-// "#,
-//     ),
-//     (
-//         "Multiple Invalid Symbols",
-//         r#"$
-// &
-// #
-// ~
-// `
-// "#,
-//     ),
-//     (
-//         "Invalid Identifier",
-//         r#"OPENQASM 2.0;
+    // @
+    // "#,
+    //     ),
+    //     (
+    //         "Multiple Invalid Symbols",
+    //         r#"$
+    // &
+    // #
+    // ~
+    // `
+    // "#,
+    //     ),
+    //     (
+    //         "Invalid Identifier",
+    //         r#"OPENQASM 2.0;
 
-// meas$ure q[0];
-// "#,
-//     ),
-//     (
-//         "Unterminated String",
-//         r#"OPENQASM 2.0;
-// include "qelib1.inc;
-// "#,
-//     ),
-//     (
-//         "Empty String",
-//         r#"OPENQASM 2.0;
-// include "";
-// "#,
-//     ),
-//     (
-//         "Malformed Real",
-//         r#"OPENQASM 2.0;
+    // meas$ure q[0];
+    // "#,
+    //     ),
+    //     (
+    //         "Unterminated String",
+    //         r#"OPENQASM 2.0;
+    // include "qelib1.inc;
+    // "#,
+    //     ),
+    //     (
+    //         "Empty String",
+    //         r#"OPENQASM 2.0;
+    // include "";
+    // "#,
+    //     ),
+    //     (
+    //         "Malformed Real",
+    //         r#"OPENQASM 2.0;
 
-// 3..14
-// "#,
-//     ),
-//     (
-//         "Missing Exponent",
-//         r#"OPENQASM 2.0;
+    // 3..14
+    // "#,
+    //     ),
+    //     (
+    //         "Missing Exponent",
+    //         r#"OPENQASM 2.0;
 
-// 1e
-// "#,
-//     ),
-//     (
-//         "Missing Exponent Sign Digits",
-//         r#"OPENQASM 2.0;
+    // 1e
+    // "#,
+    //     ),
+    //     (
+    //         "Missing Exponent Sign Digits",
+    //         r#"OPENQASM 2.0;
 
-// 1e+
-// "#,
-//     ),
-//     (
-//         "Missing Negative Exponent Digits",
-//         r#"OPENQASM 2.0;
+    // 1e+
+    // "#,
+    //     ),
+    //     (
+    //         "Missing Negative Exponent Digits",
+    //         r#"OPENQASM 2.0;
 
-// 1e-
-// "#,
-//     ),
-//     (
-//         "Hex Literal",
-//         r#"OPENQASM 2.0;
+    // 1e-
+    // "#,
+    //     ),
+    //     (
+    //         "Hex Literal",
+    //         r#"OPENQASM 2.0;
 
-// 0xFF
-// "#,
-//     ),
-//     (
-//         "Binary Literal",
-//         r#"OPENQASM 2.0;
+    // 0xFF
+    // "#,
+    //     ),
+    //     (
+    //         "Binary Literal",
+    //         r#"OPENQASM 2.0;
 
-// 0b1010
-// "#,
-//     ),
-//     (
-//         "Unicode Identifier",
-//         "OPENQASM 2.0;\n\nπ q[0];\n",
-//     ),
-//     (
-//         "Broken Arrow",
-//         r#"OPENQASM 2.0;
+    // 0b1010
+    // "#,
+    //     ),
+    //     (
+    //         "Unicode Identifier",
+    //         "OPENQASM 2.0;\n\nπ q[0];\n",
+    //     ),
+    //     (
+    //         "Broken Arrow",
+    //         r#"OPENQASM 2.0;
 
-// measure q[0] - > c[0];
-// "#,
-//     ),
-//     (
-//         "Triple Equals",
-//         r#"OPENQASM 2.0;
+    // measure q[0] - > c[0];
+    // "#,
+    //     ),
+    //     (
+    //         "Triple Equals",
+    //         r#"OPENQASM 2.0;
 
-// if(c===1) x q[0];
-// "#,
-//     ),
-//     (
-//         "Single Equals",
-//         r#"OPENQASM 2.0;
+    // if(c===1) x q[0];
+    // "#,
+    //     ),
+    //     (
+    //         "Single Equals",
+    //         r#"OPENQASM 2.0;
 
-// if(c=1) x q[0];
-// "#,
-//     ),
-//     (
-//         "Invalid Operator",
-//         r#"OPENQASM 2.0;
+    // if(c=1) x q[0];
+    // "#,
+    //     ),
+    //     (
+    //         "Invalid Operator",
+    //         r#"OPENQASM 2.0;
 
-// ->>
-// "#,
-//     ),
-//     (
-//         "Missing Right Bracket",
-//         r#"OPENQASM 2.0;
+    // ->>
+    // "#,
+    //     ),
+    //     (
+    //         "Missing Right Bracket",
+    //         r#"OPENQASM 2.0;
 
-// qreg q[2;
-// "#,
-//     ),
-//     (
-//         "Missing Right Parenthesis",
-//         r#"OPENQASM 2.0;
+    // qreg q[2;
+    // "#,
+    //     ),
+    //     (
+    //         "Missing Right Parenthesis",
+    //         r#"OPENQASM 2.0;
 
-// u3(pi/2, pi
-// "#,
-//     ),
-//     (
-//         "Very Long Identifier",
-//         r#"OPENQASM 2.0;
+    // u3(pi/2, pi
+    // "#,
+    //     ),
+    //     (
+    //         "Very Long Identifier",
+    //         r#"OPENQASM 2.0;
 
-// averyveryveryveryveryveryveryveryveryveryveryveryveryverylongidentifier
-// "#,
-//     ),
-//     (
-//         "Comment at EOF",
-//         r#"OPENQASM 2.0;
-// // comment without newline"#,
-//     ),
-//     (
-//         "Mixed Garbage",
-//         "OPENQASM 2.0;
+    // averyveryveryveryveryveryveryveryveryveryveryveryveryverylongidentifier
+    // "#,
+    //     ),
+    //     (
+    //         "Comment at EOF",
+    //         r#"OPENQASM 2.0;
+    // // comment without newline"#,
+    //     ),
+    //     (
+    //         "Mixed Garbage",
+    //         "OPENQASM 2.0;
 
-// @$%
+    // @$%
 
-// qreg q[2;
+    // qreg q[2;
 
-// measure q[0] => c[0];
+    // measure q[0] => c[0];
 
-// include \"unterminated
+    // include \"unterminated
 
-// 1e+
-// 3..14
+    // 1e+
+    // 3..14
 
-// π
+    // π
 
-// meas$ure q[0];
+    // meas$ure q[0];
 
-// ==>
-// ",
-//     ),
-// ];
+    // ==>
+    // ",
+    //     ),
+    // ];
 
     let file = File::create("lexer_output.txt")?;
     let mut writer = BufWriter::new(file);

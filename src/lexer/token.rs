@@ -110,8 +110,8 @@ impl fmt::Display for TokenKind {
 #[derive(Debug, Clone, PartialEq)]
 pub struct Token<'a> {
     pub kind: TokenKind,
-    lexeme: &'a str,
-    span: Span,
+    pub lexeme: &'a str,
+    pub span: Span,
 }
 
 impl<'a> Token<'a> {
