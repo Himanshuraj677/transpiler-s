@@ -1,0 +1,2173 @@
+Program 1: Bell State
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+
+qreg q[2];
+creg c[2];
+
+h q[0];
+cx q[0], q[1];
+
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   37..41     4:1  
+Identifier       q                      42..43     4:6  
+LeftBracket      [                      43..44     4:7  
+Integer          2                      44..45     4:8  
+RightBracket     ]                      45..46     4:9  
+Semicolon        ;                      46..47     4:10 
+CReg             creg                   48..52     5:1  
+Identifier       c                      53..54     5:6  
+LeftBracket      [                      54..55     5:7  
+Integer          2                      55..56     5:8  
+RightBracket     ]                      56..57     5:9  
+Semicolon        ;                      57..58     5:10 
+Identifier       h                      60..61     7:1  
+Identifier       q                      62..63     7:3  
+LeftBracket      [                      63..64     7:4  
+Integer          0                      64..65     7:5  
+RightBracket     ]                      65..66     7:6  
+Semicolon        ;                      66..67     7:7  
+Identifier       cx                     68..70     8:1  
+Identifier       q                      71..72     8:4  
+LeftBracket      [                      72..73     8:5  
+Integer          0                      73..74     8:6  
+RightBracket     ]                      74..75     8:7  
+Comma            ,                      75..76     8:8  
+Identifier       q                      77..78     8:10 
+LeftBracket      [                      78..79     8:11 
+Integer          1                      79..80     8:12 
+RightBracket     ]                      80..81     8:13 
+Semicolon        ;                      81..82     8:14 
+Measure          measure                84..91    10:1  
+Identifier       q                      92..93    10:9  
+LeftBracket      [                      93..94    10:10 
+Integer          0                      94..95    10:11 
+RightBracket     ]                      95..96    10:12 
+Arrow            ->                     97..99    10:14 
+Identifier       c                     100..101   10:17 
+LeftBracket      [                     101..102   10:18 
+Integer          0                     102..103   10:19 
+RightBracket     ]                     103..104   10:20 
+Semicolon        ;                     104..105   10:21 
+Measure          measure               106..113   11:1  
+Identifier       q                     114..115   11:9  
+LeftBracket      [                     115..116   11:10 
+Integer          1                     116..117   11:11 
+RightBracket     ]                     117..118   11:12 
+Arrow            ->                    119..121   11:14 
+Identifier       c                     122..123   11:17 
+LeftBracket      [                     123..124   11:18 
+Integer          1                     124..125   11:19 
+RightBracket     ]                     125..126   11:20 
+Semicolon        ;                     126..127   11:21 
+
+================================================================================
+
+Program 2: Single Qubit
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+
+qreg q[1];
+creg c[1];
+
+x q[0];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   37..41     4:1  
+Identifier       q                      42..43     4:6  
+LeftBracket      [                      43..44     4:7  
+Integer          1                      44..45     4:8  
+RightBracket     ]                      45..46     4:9  
+Semicolon        ;                      46..47     4:10 
+CReg             creg                   48..52     5:1  
+Identifier       c                      53..54     5:6  
+LeftBracket      [                      54..55     5:7  
+Integer          1                      55..56     5:8  
+RightBracket     ]                      56..57     5:9  
+Semicolon        ;                      57..58     5:10 
+Identifier       x                      60..61     7:1  
+Identifier       q                      62..63     7:3  
+LeftBracket      [                      63..64     7:4  
+Integer          0                      64..65     7:5  
+RightBracket     ]                      65..66     7:6  
+Semicolon        ;                      66..67     7:7  
+Measure          measure                68..75     8:1  
+Identifier       q                      76..77     8:9  
+LeftBracket      [                      77..78     8:10 
+Integer          0                      78..79     8:11 
+RightBracket     ]                      79..80     8:12 
+Arrow            ->                     81..83     8:14 
+Identifier       c                      84..85     8:17 
+LeftBracket      [                      85..86     8:18 
+Integer          0                      86..87     8:19 
+RightBracket     ]                      87..88     8:20 
+Semicolon        ;                      88..89     8:21 
+
+================================================================================
+
+Program 3: GHZ State
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+
+qreg q[3];
+creg c[3];
+
+h q[0];
+cx q[0], q[1];
+cx q[1], q[2];
+
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+measure q[2] -> c[2];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   37..41     4:1  
+Identifier       q                      42..43     4:6  
+LeftBracket      [                      43..44     4:7  
+Integer          3                      44..45     4:8  
+RightBracket     ]                      45..46     4:9  
+Semicolon        ;                      46..47     4:10 
+CReg             creg                   48..52     5:1  
+Identifier       c                      53..54     5:6  
+LeftBracket      [                      54..55     5:7  
+Integer          3                      55..56     5:8  
+RightBracket     ]                      56..57     5:9  
+Semicolon        ;                      57..58     5:10 
+Identifier       h                      60..61     7:1  
+Identifier       q                      62..63     7:3  
+LeftBracket      [                      63..64     7:4  
+Integer          0                      64..65     7:5  
+RightBracket     ]                      65..66     7:6  
+Semicolon        ;                      66..67     7:7  
+Identifier       cx                     68..70     8:1  
+Identifier       q                      71..72     8:4  
+LeftBracket      [                      72..73     8:5  
+Integer          0                      73..74     8:6  
+RightBracket     ]                      74..75     8:7  
+Comma            ,                      75..76     8:8  
+Identifier       q                      77..78     8:10 
+LeftBracket      [                      78..79     8:11 
+Integer          1                      79..80     8:12 
+RightBracket     ]                      80..81     8:13 
+Semicolon        ;                      81..82     8:14 
+Identifier       cx                     83..85     9:1  
+Identifier       q                      86..87     9:4  
+LeftBracket      [                      87..88     9:5  
+Integer          1                      88..89     9:6  
+RightBracket     ]                      89..90     9:7  
+Comma            ,                      90..91     9:8  
+Identifier       q                      92..93     9:10 
+LeftBracket      [                      93..94     9:11 
+Integer          2                      94..95     9:12 
+RightBracket     ]                      95..96     9:13 
+Semicolon        ;                      96..97     9:14 
+Measure          measure                99..106   11:1  
+Identifier       q                     107..108   11:9  
+LeftBracket      [                     108..109   11:10 
+Integer          0                     109..110   11:11 
+RightBracket     ]                     110..111   11:12 
+Arrow            ->                    112..114   11:14 
+Identifier       c                     115..116   11:17 
+LeftBracket      [                     116..117   11:18 
+Integer          0                     117..118   11:19 
+RightBracket     ]                     118..119   11:20 
+Semicolon        ;                     119..120   11:21 
+Measure          measure               121..128   12:1  
+Identifier       q                     129..130   12:9  
+LeftBracket      [                     130..131   12:10 
+Integer          1                     131..132   12:11 
+RightBracket     ]                     132..133   12:12 
+Arrow            ->                    134..136   12:14 
+Identifier       c                     137..138   12:17 
+LeftBracket      [                     138..139   12:18 
+Integer          1                     139..140   12:19 
+RightBracket     ]                     140..141   12:20 
+Semicolon        ;                     141..142   12:21 
+Measure          measure               143..150   13:1  
+Identifier       q                     151..152   13:9  
+LeftBracket      [                     152..153   13:10 
+Integer          2                     153..154   13:11 
+RightBracket     ]                     154..155   13:12 
+Arrow            ->                    156..158   13:14 
+Identifier       c                     159..160   13:17 
+LeftBracket      [                     160..161   13:18 
+Integer          2                     161..162   13:19 
+RightBracket     ]                     162..163   13:20 
+Semicolon        ;                     163..164   13:21 
+
+================================================================================
+
+Program 4: Custom Gate Definition
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+gate my_gate(theta, phi) a, b {
+    u3(theta, phi, -pi/2) a;
+    cx a, b;
+    u1(phi + theta) b;
+}
+qreg q[2];
+creg c[2];
+my_gate(pi/4, pi/2) q[0], q[1];
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+Gate             gate                   36..40     3:1  
+Identifier       my_gate                41..48     3:6  
+LeftParen        (                      48..49     3:13 
+Identifier       theta                  49..54     3:14 
+Comma            ,                      54..55     3:19 
+Identifier       phi                    56..59     3:21 
+RightParen       )                      59..60     3:24 
+Identifier       a                      61..62     3:26 
+Comma            ,                      62..63     3:27 
+Identifier       b                      64..65     3:29 
+LeftBrace        {                      66..67     3:31 
+Identifier       u3                     72..74     4:5  
+LeftParen        (                      74..75     4:7  
+Identifier       theta                  75..80     4:8  
+Comma            ,                      80..81     4:13 
+Identifier       phi                    82..85     4:15 
+Comma            ,                      85..86     4:18 
+Minus            -                      87..88     4:20 
+Pi               pi                     88..90     4:21 
+Slash            /                      90..91     4:23 
+Integer          2                      91..92     4:24 
+RightParen       )                      92..93     4:25 
+Identifier       a                      94..95     4:27 
+Semicolon        ;                      95..96     4:28 
+Identifier       cx                    101..103    5:5  
+Identifier       a                     104..105    5:8  
+Comma            ,                     105..106    5:9  
+Identifier       b                     107..108    5:11 
+Semicolon        ;                     108..109    5:12 
+Identifier       u1                    114..116    6:5  
+LeftParen        (                     116..117    6:7  
+Identifier       phi                   117..120    6:8  
+Plus             +                     121..122    6:12 
+Identifier       theta                 123..128    6:14 
+RightParen       )                     128..129    6:19 
+Identifier       b                     130..131    6:21 
+Semicolon        ;                     131..132    6:22 
+RightBrace       }                     133..134    7:1  
+QReg             qreg                  135..139    8:1  
+Identifier       q                     140..141    8:6  
+LeftBracket      [                     141..142    8:7  
+Integer          2                     142..143    8:8  
+RightBracket     ]                     143..144    8:9  
+Semicolon        ;                     144..145    8:10 
+CReg             creg                  146..150    9:1  
+Identifier       c                     151..152    9:6  
+LeftBracket      [                     152..153    9:7  
+Integer          2                     153..154    9:8  
+RightBracket     ]                     154..155    9:9  
+Semicolon        ;                     155..156    9:10 
+Identifier       my_gate               157..164   10:1  
+LeftParen        (                     164..165   10:8  
+Pi               pi                    165..167   10:9  
+Slash            /                     167..168   10:11 
+Integer          4                     168..169   10:12 
+Comma            ,                     169..170   10:13 
+Pi               pi                    171..173   10:15 
+Slash            /                     173..174   10:17 
+Integer          2                     174..175   10:18 
+RightParen       )                     175..176   10:19 
+Identifier       q                     177..178   10:21 
+LeftBracket      [                     178..179   10:22 
+Integer          0                     179..180   10:23 
+RightBracket     ]                     180..181   10:24 
+Comma            ,                     181..182   10:25 
+Identifier       q                     183..184   10:27 
+LeftBracket      [                     184..185   10:28 
+Integer          1                     185..186   10:29 
+RightBracket     ]                     186..187   10:30 
+Semicolon        ;                     187..188   10:31 
+Measure          measure               189..196   11:1  
+Identifier       q                     197..198   11:9  
+LeftBracket      [                     198..199   11:10 
+Integer          0                     199..200   11:11 
+RightBracket     ]                     200..201   11:12 
+Arrow            ->                    202..204   11:14 
+Identifier       c                     205..206   11:17 
+LeftBracket      [                     206..207   11:18 
+Integer          0                     207..208   11:19 
+RightBracket     ]                     208..209   11:20 
+Semicolon        ;                     209..210   11:21 
+Measure          measure               211..218   12:1  
+Identifier       q                     219..220   12:9  
+LeftBracket      [                     220..221   12:10 
+Integer          1                     221..222   12:11 
+RightBracket     ]                     222..223   12:12 
+Arrow            ->                    224..226   12:14 
+Identifier       c                     227..228   12:17 
+LeftBracket      [                     228..229   12:18 
+Integer          1                     229..230   12:19 
+RightBracket     ]                     230..231   12:20 
+Semicolon        ;                     231..232   12:21 
+
+================================================================================
+
+Program 5: Opaque Gate Declaration
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+opaque black_box(a, b) q0, q1;
+qreg q[2];
+creg c[2];
+black_box(0.5, -1.25) q[0], q[1];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+Opaque           opaque                 36..42     3:1  
+Identifier       black_box              43..52     3:8  
+LeftParen        (                      52..53     3:17 
+Identifier       a                      53..54     3:18 
+Comma            ,                      54..55     3:19 
+Identifier       b                      56..57     3:21 
+RightParen       )                      57..58     3:22 
+Identifier       q0                     59..61     3:24 
+Comma            ,                      61..62     3:26 
+Identifier       q1                     63..65     3:28 
+Semicolon        ;                      65..66     3:30 
+QReg             qreg                   67..71     4:1  
+Identifier       q                      72..73     4:6  
+LeftBracket      [                      73..74     4:7  
+Integer          2                      74..75     4:8  
+RightBracket     ]                      75..76     4:9  
+Semicolon        ;                      76..77     4:10 
+CReg             creg                   78..82     5:1  
+Identifier       c                      83..84     5:6  
+LeftBracket      [                      84..85     5:7  
+Integer          2                      85..86     5:8  
+RightBracket     ]                      86..87     5:9  
+Semicolon        ;                      87..88     5:10 
+Identifier       black_box              89..98     6:1  
+LeftParen        (                      98..99     6:10 
+Real             0.5                    99..102    6:11 
+Comma            ,                     102..103    6:14 
+Minus            -                     104..105    6:16 
+Real             1.25                  105..109    6:17 
+RightParen       )                     109..110    6:21 
+Identifier       q                     111..112    6:23 
+LeftBracket      [                     112..113    6:24 
+Integer          0                     113..114    6:25 
+RightBracket     ]                     114..115    6:26 
+Comma            ,                     115..116    6:27 
+Identifier       q                     117..118    6:29 
+LeftBracket      [                     118..119    6:30 
+Integer          1                     119..120    6:31 
+RightBracket     ]                     120..121    6:32 
+Semicolon        ;                     121..122    6:33 
+Measure          measure               123..130    7:1  
+Identifier       q                     131..132    7:9  
+LeftBracket      [                     132..133    7:10 
+Integer          0                     133..134    7:11 
+RightBracket     ]                     134..135    7:12 
+Arrow            ->                    136..138    7:14 
+Identifier       c                     139..140    7:17 
+LeftBracket      [                     140..141    7:18 
+Integer          0                     141..142    7:19 
+RightBracket     ]                     142..143    7:20 
+Semicolon        ;                     143..144    7:21 
+
+================================================================================
+
+Program 6: Classical If Statement
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[2];
+creg c[2];
+h q[0];
+measure q[0] -> c[0];
+if(c==1) x q[1];
+measure q[1] -> c[1];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          2                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          2                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       h                      58..59     5:1  
+Identifier       q                      60..61     5:3  
+LeftBracket      [                      61..62     5:4  
+Integer          0                      62..63     5:5  
+RightBracket     ]                      63..64     5:6  
+Semicolon        ;                      64..65     5:7  
+Measure          measure                66..73     6:1  
+Identifier       q                      74..75     6:9  
+LeftBracket      [                      75..76     6:10 
+Integer          0                      76..77     6:11 
+RightBracket     ]                      77..78     6:12 
+Arrow            ->                     79..81     6:14 
+Identifier       c                      82..83     6:17 
+LeftBracket      [                      83..84     6:18 
+Integer          0                      84..85     6:19 
+RightBracket     ]                      85..86     6:20 
+Semicolon        ;                      86..87     6:21 
+If               if                     88..90     7:1  
+LeftParen        (                      90..91     7:3  
+Identifier       c                      91..92     7:4  
+EqualEqual       ==                     92..94     7:5  
+Integer          1                      94..95     7:7  
+RightParen       )                      95..96     7:8  
+Identifier       x                      97..98     7:10 
+Identifier       q                      99..100    7:12 
+LeftBracket      [                     100..101    7:13 
+Integer          1                     101..102    7:14 
+RightBracket     ]                     102..103    7:15 
+Semicolon        ;                     103..104    7:16 
+Measure          measure               105..112    8:1  
+Identifier       q                     113..114    8:9  
+LeftBracket      [                     114..115    8:10 
+Integer          1                     115..116    8:11 
+RightBracket     ]                     116..117    8:12 
+Arrow            ->                    118..120    8:14 
+Identifier       c                     121..122    8:17 
+LeftBracket      [                     122..123    8:18 
+Integer          1                     123..124    8:19 
+RightBracket     ]                     124..125    8:20 
+Semicolon        ;                     125..126    8:21 
+
+================================================================================
+
+Program 7: Barrier Directive
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[3];
+creg c[3];
+h q[0];
+h q[1];
+h q[2];
+barrier q[0], q[1], q[2];
+cx q[0], q[1];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          3                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          3                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       h                      58..59     5:1  
+Identifier       q                      60..61     5:3  
+LeftBracket      [                      61..62     5:4  
+Integer          0                      62..63     5:5  
+RightBracket     ]                      63..64     5:6  
+Semicolon        ;                      64..65     5:7  
+Identifier       h                      66..67     6:1  
+Identifier       q                      68..69     6:3  
+LeftBracket      [                      69..70     6:4  
+Integer          1                      70..71     6:5  
+RightBracket     ]                      71..72     6:6  
+Semicolon        ;                      72..73     6:7  
+Identifier       h                      74..75     7:1  
+Identifier       q                      76..77     7:3  
+LeftBracket      [                      77..78     7:4  
+Integer          2                      78..79     7:5  
+RightBracket     ]                      79..80     7:6  
+Semicolon        ;                      80..81     7:7  
+Barrier          barrier                82..89     8:1  
+Identifier       q                      90..91     8:9  
+LeftBracket      [                      91..92     8:10 
+Integer          0                      92..93     8:11 
+RightBracket     ]                      93..94     8:12 
+Comma            ,                      94..95     8:13 
+Identifier       q                      96..97     8:15 
+LeftBracket      [                      97..98     8:16 
+Integer          1                      98..99     8:17 
+RightBracket     ]                      99..100    8:18 
+Comma            ,                     100..101    8:19 
+Identifier       q                     102..103    8:21 
+LeftBracket      [                     103..104    8:22 
+Integer          2                     104..105    8:23 
+RightBracket     ]                     105..106    8:24 
+Semicolon        ;                     106..107    8:25 
+Identifier       cx                    108..110    9:1  
+Identifier       q                     111..112    9:4  
+LeftBracket      [                     112..113    9:5  
+Integer          0                     113..114    9:6  
+RightBracket     ]                     114..115    9:7  
+Comma            ,                     115..116    9:8  
+Identifier       q                     117..118    9:10 
+LeftBracket      [                     118..119    9:11 
+Integer          1                     119..120    9:12 
+RightBracket     ]                     120..121    9:13 
+Semicolon        ;                     121..122    9:14 
+Measure          measure               123..130   10:1  
+Identifier       q                     131..132   10:9  
+LeftBracket      [                     132..133   10:10 
+Integer          0                     133..134   10:11 
+RightBracket     ]                     134..135   10:12 
+Arrow            ->                    136..138   10:14 
+Identifier       c                     139..140   10:17 
+LeftBracket      [                     140..141   10:18 
+Integer          0                     141..142   10:19 
+RightBracket     ]                     142..143   10:20 
+Semicolon        ;                     143..144   10:21 
+
+================================================================================
+
+Program 8: Nested Math Expressions
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[1];
+creg c[1];
+u3(sin(pi/4) + cos(pi/3), sqrt(2) * exp(1), ln(2.71828)) q[0];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          1                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          1                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       u3                     58..60     5:1  
+LeftParen        (                      60..61     5:3  
+Sin              sin                    61..64     5:4  
+LeftParen        (                      64..65     5:7  
+Pi               pi                     65..67     5:8  
+Slash            /                      67..68     5:10 
+Integer          4                      68..69     5:11 
+RightParen       )                      69..70     5:12 
+Plus             +                      71..72     5:14 
+Cos              cos                    73..76     5:16 
+LeftParen        (                      76..77     5:19 
+Pi               pi                     77..79     5:20 
+Slash            /                      79..80     5:22 
+Integer          3                      80..81     5:23 
+RightParen       )                      81..82     5:24 
+Comma            ,                      82..83     5:25 
+Sqrt             sqrt                   84..88     5:27 
+LeftParen        (                      88..89     5:31 
+Integer          2                      89..90     5:32 
+RightParen       )                      90..91     5:33 
+Star             *                      92..93     5:35 
+Exp              exp                    94..97     5:37 
+LeftParen        (                      97..98     5:40 
+Integer          1                      98..99     5:41 
+RightParen       )                      99..100    5:42 
+Comma            ,                     100..101    5:43 
+Ln               ln                    102..104    5:45 
+LeftParen        (                     104..105    5:47 
+Real             2.71828               105..112    5:48 
+RightParen       )                     112..113    5:55 
+RightParen       )                     113..114    5:56 
+Identifier       q                     115..116    5:58 
+LeftBracket      [                     116..117    5:59 
+Integer          0                     117..118    5:60 
+RightBracket     ]                     118..119    5:61 
+Semicolon        ;                     119..120    5:62 
+Measure          measure               121..128    6:1  
+Identifier       q                     129..130    6:9  
+LeftBracket      [                     130..131    6:10 
+Integer          0                     131..132    6:11 
+RightBracket     ]                     132..133    6:12 
+Arrow            ->                    134..136    6:14 
+Identifier       c                     137..138    6:17 
+LeftBracket      [                     138..139    6:18 
+Integer          0                     139..140    6:19 
+RightBracket     ]                     140..141    6:20 
+Semicolon        ;                     141..142    6:21 
+
+================================================================================
+
+Program 9: Negative and Scientific Notation Reals
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[1];
+creg c[1];
+rz(-1.5707963) q[0];
+rx(3.14e-2) q[0];
+ry(-2.5E+1) q[0];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          1                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          1                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       rz                     58..60     5:1  
+LeftParen        (                      60..61     5:3  
+Minus            -                      61..62     5:4  
+Real             1.5707963              62..71     5:5  
+RightParen       )                      71..72     5:14 
+Identifier       q                      73..74     5:16 
+LeftBracket      [                      74..75     5:17 
+Integer          0                      75..76     5:18 
+RightBracket     ]                      76..77     5:19 
+Semicolon        ;                      77..78     5:20 
+Identifier       rx                     79..81     6:1  
+LeftParen        (                      81..82     6:3  
+Real             3.14e-2                82..89     6:4  
+RightParen       )                      89..90     6:11 
+Identifier       q                      91..92     6:13 
+LeftBracket      [                      92..93     6:14 
+Integer          0                      93..94     6:15 
+RightBracket     ]                      94..95     6:16 
+Semicolon        ;                      95..96     6:17 
+Identifier       ry                     97..99     7:1  
+LeftParen        (                      99..100    7:3  
+Minus            -                     100..101    7:4  
+Real             2.5E+1                101..107    7:5  
+RightParen       )                     107..108    7:11 
+Identifier       q                     109..110    7:13 
+LeftBracket      [                     110..111    7:14 
+Integer          0                     111..112    7:15 
+RightBracket     ]                     112..113    7:16 
+Semicolon        ;                     113..114    7:17 
+Measure          measure               115..122    8:1  
+Identifier       q                     123..124    8:9  
+LeftBracket      [                     124..125    8:10 
+Integer          0                     125..126    8:11 
+RightBracket     ]                     126..127    8:12 
+Arrow            ->                    128..130    8:14 
+Identifier       c                     131..132    8:17 
+LeftBracket      [                     132..133    8:18 
+Integer          0                     133..134    8:19 
+RightBracket     ]                     134..135    8:20 
+Semicolon        ;                     135..136    8:21 
+
+================================================================================
+
+Program 10: Multiple Registers
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg a[2];
+qreg b[3];
+creg ca[2];
+creg cb[3];
+h a[0];
+cx a[0], b[0];
+cx b[0], b[1];
+measure a[0] -> ca[0];
+measure b[1] -> cb[1];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       a                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          2                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+QReg             qreg                   47..51     4:1  
+Identifier       b                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          3                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+CReg             creg                   58..62     5:1  
+Identifier       ca                     63..65     5:6  
+LeftBracket      [                      65..66     5:8  
+Integer          2                      66..67     5:9  
+RightBracket     ]                      67..68     5:10 
+Semicolon        ;                      68..69     5:11 
+CReg             creg                   70..74     6:1  
+Identifier       cb                     75..77     6:6  
+LeftBracket      [                      77..78     6:8  
+Integer          3                      78..79     6:9  
+RightBracket     ]                      79..80     6:10 
+Semicolon        ;                      80..81     6:11 
+Identifier       h                      82..83     7:1  
+Identifier       a                      84..85     7:3  
+LeftBracket      [                      85..86     7:4  
+Integer          0                      86..87     7:5  
+RightBracket     ]                      87..88     7:6  
+Semicolon        ;                      88..89     7:7  
+Identifier       cx                     90..92     8:1  
+Identifier       a                      93..94     8:4  
+LeftBracket      [                      94..95     8:5  
+Integer          0                      95..96     8:6  
+RightBracket     ]                      96..97     8:7  
+Comma            ,                      97..98     8:8  
+Identifier       b                      99..100    8:10 
+LeftBracket      [                     100..101    8:11 
+Integer          0                     101..102    8:12 
+RightBracket     ]                     102..103    8:13 
+Semicolon        ;                     103..104    8:14 
+Identifier       cx                    105..107    9:1  
+Identifier       b                     108..109    9:4  
+LeftBracket      [                     109..110    9:5  
+Integer          0                     110..111    9:6  
+RightBracket     ]                     111..112    9:7  
+Comma            ,                     112..113    9:8  
+Identifier       b                     114..115    9:10 
+LeftBracket      [                     115..116    9:11 
+Integer          1                     116..117    9:12 
+RightBracket     ]                     117..118    9:13 
+Semicolon        ;                     118..119    9:14 
+Measure          measure               120..127   10:1  
+Identifier       a                     128..129   10:9  
+LeftBracket      [                     129..130   10:10 
+Integer          0                     130..131   10:11 
+RightBracket     ]                     131..132   10:12 
+Arrow            ->                    133..135   10:14 
+Identifier       ca                    136..138   10:17 
+LeftBracket      [                     138..139   10:19 
+Integer          0                     139..140   10:20 
+RightBracket     ]                     140..141   10:21 
+Semicolon        ;                     141..142   10:22 
+Measure          measure               143..150   11:1  
+Identifier       b                     151..152   11:9  
+LeftBracket      [                     152..153   11:10 
+Integer          1                     153..154   11:11 
+RightBracket     ]                     154..155   11:12 
+Arrow            ->                    156..158   11:14 
+Identifier       cb                    159..161   11:17 
+LeftBracket      [                     161..162   11:19 
+Integer          1                     162..163   11:20 
+RightBracket     ]                     163..164   11:21 
+Semicolon        ;                     164..165   11:22 
+
+================================================================================
+
+Program 11: Toffoli Decomposition
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[3];
+creg c[3];
+h q[2];
+cx q[1], q[2];
+tdg q[2];
+cx q[0], q[2];
+t q[2];
+cx q[1], q[2];
+tdg q[2];
+cx q[0], q[2];
+t q[1];
+t q[2];
+cx q[0], q[1];
+h q[2];
+t q[0];
+tdg q[1];
+cx q[0], q[1];
+measure q[2] -> c[2];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          3                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          3                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       h                      58..59     5:1  
+Identifier       q                      60..61     5:3  
+LeftBracket      [                      61..62     5:4  
+Integer          2                      62..63     5:5  
+RightBracket     ]                      63..64     5:6  
+Semicolon        ;                      64..65     5:7  
+Identifier       cx                     66..68     6:1  
+Identifier       q                      69..70     6:4  
+LeftBracket      [                      70..71     6:5  
+Integer          1                      71..72     6:6  
+RightBracket     ]                      72..73     6:7  
+Comma            ,                      73..74     6:8  
+Identifier       q                      75..76     6:10 
+LeftBracket      [                      76..77     6:11 
+Integer          2                      77..78     6:12 
+RightBracket     ]                      78..79     6:13 
+Semicolon        ;                      79..80     6:14 
+Identifier       tdg                    81..84     7:1  
+Identifier       q                      85..86     7:5  
+LeftBracket      [                      86..87     7:6  
+Integer          2                      87..88     7:7  
+RightBracket     ]                      88..89     7:8  
+Semicolon        ;                      89..90     7:9  
+Identifier       cx                     91..93     8:1  
+Identifier       q                      94..95     8:4  
+LeftBracket      [                      95..96     8:5  
+Integer          0                      96..97     8:6  
+RightBracket     ]                      97..98     8:7  
+Comma            ,                      98..99     8:8  
+Identifier       q                     100..101    8:10 
+LeftBracket      [                     101..102    8:11 
+Integer          2                     102..103    8:12 
+RightBracket     ]                     103..104    8:13 
+Semicolon        ;                     104..105    8:14 
+Identifier       t                     106..107    9:1  
+Identifier       q                     108..109    9:3  
+LeftBracket      [                     109..110    9:4  
+Integer          2                     110..111    9:5  
+RightBracket     ]                     111..112    9:6  
+Semicolon        ;                     112..113    9:7  
+Identifier       cx                    114..116   10:1  
+Identifier       q                     117..118   10:4  
+LeftBracket      [                     118..119   10:5  
+Integer          1                     119..120   10:6  
+RightBracket     ]                     120..121   10:7  
+Comma            ,                     121..122   10:8  
+Identifier       q                     123..124   10:10 
+LeftBracket      [                     124..125   10:11 
+Integer          2                     125..126   10:12 
+RightBracket     ]                     126..127   10:13 
+Semicolon        ;                     127..128   10:14 
+Identifier       tdg                   129..132   11:1  
+Identifier       q                     133..134   11:5  
+LeftBracket      [                     134..135   11:6  
+Integer          2                     135..136   11:7  
+RightBracket     ]                     136..137   11:8  
+Semicolon        ;                     137..138   11:9  
+Identifier       cx                    139..141   12:1  
+Identifier       q                     142..143   12:4  
+LeftBracket      [                     143..144   12:5  
+Integer          0                     144..145   12:6  
+RightBracket     ]                     145..146   12:7  
+Comma            ,                     146..147   12:8  
+Identifier       q                     148..149   12:10 
+LeftBracket      [                     149..150   12:11 
+Integer          2                     150..151   12:12 
+RightBracket     ]                     151..152   12:13 
+Semicolon        ;                     152..153   12:14 
+Identifier       t                     154..155   13:1  
+Identifier       q                     156..157   13:3  
+LeftBracket      [                     157..158   13:4  
+Integer          1                     158..159   13:5  
+RightBracket     ]                     159..160   13:6  
+Semicolon        ;                     160..161   13:7  
+Identifier       t                     162..163   14:1  
+Identifier       q                     164..165   14:3  
+LeftBracket      [                     165..166   14:4  
+Integer          2                     166..167   14:5  
+RightBracket     ]                     167..168   14:6  
+Semicolon        ;                     168..169   14:7  
+Identifier       cx                    170..172   15:1  
+Identifier       q                     173..174   15:4  
+LeftBracket      [                     174..175   15:5  
+Integer          0                     175..176   15:6  
+RightBracket     ]                     176..177   15:7  
+Comma            ,                     177..178   15:8  
+Identifier       q                     179..180   15:10 
+LeftBracket      [                     180..181   15:11 
+Integer          1                     181..182   15:12 
+RightBracket     ]                     182..183   15:13 
+Semicolon        ;                     183..184   15:14 
+Identifier       h                     185..186   16:1  
+Identifier       q                     187..188   16:3  
+LeftBracket      [                     188..189   16:4  
+Integer          2                     189..190   16:5  
+RightBracket     ]                     190..191   16:6  
+Semicolon        ;                     191..192   16:7  
+Identifier       t                     193..194   17:1  
+Identifier       q                     195..196   17:3  
+LeftBracket      [                     196..197   17:4  
+Integer          0                     197..198   17:5  
+RightBracket     ]                     198..199   17:6  
+Semicolon        ;                     199..200   17:7  
+Identifier       tdg                   201..204   18:1  
+Identifier       q                     205..206   18:5  
+LeftBracket      [                     206..207   18:6  
+Integer          1                     207..208   18:7  
+RightBracket     ]                     208..209   18:8  
+Semicolon        ;                     209..210   18:9  
+Identifier       cx                    211..213   19:1  
+Identifier       q                     214..215   19:4  
+LeftBracket      [                     215..216   19:5  
+Integer          0                     216..217   19:6  
+RightBracket     ]                     217..218   19:7  
+Comma            ,                     218..219   19:8  
+Identifier       q                     220..221   19:10 
+LeftBracket      [                     221..222   19:11 
+Integer          1                     222..223   19:12 
+RightBracket     ]                     223..224   19:13 
+Semicolon        ;                     224..225   19:14 
+Measure          measure               226..233   20:1  
+Identifier       q                     234..235   20:9  
+LeftBracket      [                     235..236   20:10 
+Integer          2                     236..237   20:11 
+RightBracket     ]                     237..238   20:12 
+Arrow            ->                    239..241   20:14 
+Identifier       c                     242..243   20:17 
+LeftBracket      [                     243..244   20:18 
+Integer          2                     244..245   20:19 
+RightBracket     ]                     245..246   20:20 
+Semicolon        ;                     246..247   20:21 
+
+================================================================================
+
+Program 12: Controlled Phase Gates
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[3];
+creg c[3];
+cu1(pi/2) q[0], q[1];
+cu1(pi/4) q[0], q[2];
+cu1(pi/2) q[1], q[2];
+h q[2];
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+measure q[2] -> c[2];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          3                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          3                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       cu1                    58..61     5:1  
+LeftParen        (                      61..62     5:4  
+Pi               pi                     62..64     5:5  
+Slash            /                      64..65     5:7  
+Integer          2                      65..66     5:8  
+RightParen       )                      66..67     5:9  
+Identifier       q                      68..69     5:11 
+LeftBracket      [                      69..70     5:12 
+Integer          0                      70..71     5:13 
+RightBracket     ]                      71..72     5:14 
+Comma            ,                      72..73     5:15 
+Identifier       q                      74..75     5:17 
+LeftBracket      [                      75..76     5:18 
+Integer          1                      76..77     5:19 
+RightBracket     ]                      77..78     5:20 
+Semicolon        ;                      78..79     5:21 
+Identifier       cu1                    80..83     6:1  
+LeftParen        (                      83..84     6:4  
+Pi               pi                     84..86     6:5  
+Slash            /                      86..87     6:7  
+Integer          4                      87..88     6:8  
+RightParen       )                      88..89     6:9  
+Identifier       q                      90..91     6:11 
+LeftBracket      [                      91..92     6:12 
+Integer          0                      92..93     6:13 
+RightBracket     ]                      93..94     6:14 
+Comma            ,                      94..95     6:15 
+Identifier       q                      96..97     6:17 
+LeftBracket      [                      97..98     6:18 
+Integer          2                      98..99     6:19 
+RightBracket     ]                      99..100    6:20 
+Semicolon        ;                     100..101    6:21 
+Identifier       cu1                   102..105    7:1  
+LeftParen        (                     105..106    7:4  
+Pi               pi                    106..108    7:5  
+Slash            /                     108..109    7:7  
+Integer          2                     109..110    7:8  
+RightParen       )                     110..111    7:9  
+Identifier       q                     112..113    7:11 
+LeftBracket      [                     113..114    7:12 
+Integer          1                     114..115    7:13 
+RightBracket     ]                     115..116    7:14 
+Comma            ,                     116..117    7:15 
+Identifier       q                     118..119    7:17 
+LeftBracket      [                     119..120    7:18 
+Integer          2                     120..121    7:19 
+RightBracket     ]                     121..122    7:20 
+Semicolon        ;                     122..123    7:21 
+Identifier       h                     124..125    8:1  
+Identifier       q                     126..127    8:3  
+LeftBracket      [                     127..128    8:4  
+Integer          2                     128..129    8:5  
+RightBracket     ]                     129..130    8:6  
+Semicolon        ;                     130..131    8:7  
+Measure          measure               132..139    9:1  
+Identifier       q                     140..141    9:9  
+LeftBracket      [                     141..142    9:10 
+Integer          0                     142..143    9:11 
+RightBracket     ]                     143..144    9:12 
+Arrow            ->                    145..147    9:14 
+Identifier       c                     148..149    9:17 
+LeftBracket      [                     149..150    9:18 
+Integer          0                     150..151    9:19 
+RightBracket     ]                     151..152    9:20 
+Semicolon        ;                     152..153    9:21 
+Measure          measure               154..161   10:1  
+Identifier       q                     162..163   10:9  
+LeftBracket      [                     163..164   10:10 
+Integer          1                     164..165   10:11 
+RightBracket     ]                     165..166   10:12 
+Arrow            ->                    167..169   10:14 
+Identifier       c                     170..171   10:17 
+LeftBracket      [                     171..172   10:18 
+Integer          1                     172..173   10:19 
+RightBracket     ]                     173..174   10:20 
+Semicolon        ;                     174..175   10:21 
+Measure          measure               176..183   11:1  
+Identifier       q                     184..185   11:9  
+LeftBracket      [                     185..186   11:10 
+Integer          2                     186..187   11:11 
+RightBracket     ]                     187..188   11:12 
+Arrow            ->                    189..191   11:14 
+Identifier       c                     192..193   11:17 
+LeftBracket      [                     193..194   11:18 
+Integer          2                     194..195   11:19 
+RightBracket     ]                     195..196   11:20 
+Semicolon        ;                     196..197   11:21 
+
+================================================================================
+
+Program 13: Comments and Whitespace Edge Cases
+================================================================================
+
+OPENQASM 2.0;
+// This is a line comment
+include "qelib1.inc"; // another comment
+qreg   q[2] ;
+creg c[2];
+
+
+h q[0];    // apply hadamard
+cx q[0],q[1];// no space before comment
+measure q[0]   ->   c[0] ;
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                40..47     3:1  
+StringLiteral    "qelib1.inc"           48..60     3:9  
+Semicolon        ;                      60..61     3:21 
+QReg             qreg                   81..85     4:1  
+Identifier       q                      88..89     4:8  
+LeftBracket      [                      89..90     4:9  
+Integer          2                      90..91     4:10 
+RightBracket     ]                      91..92     4:11 
+Semicolon        ;                      93..94     4:13 
+CReg             creg                   95..99     5:1  
+Identifier       c                     100..101    5:6  
+LeftBracket      [                     101..102    5:7  
+Integer          2                     102..103    5:8  
+RightBracket     ]                     103..104    5:9  
+Semicolon        ;                     104..105    5:10 
+Identifier       h                     108..109    8:1  
+Identifier       q                     110..111    8:3  
+LeftBracket      [                     111..112    8:4  
+Integer          0                     112..113    8:5  
+RightBracket     ]                     113..114    8:6  
+Semicolon        ;                     114..115    8:7  
+Identifier       cx                    137..139    9:1  
+Identifier       q                     140..141    9:4  
+LeftBracket      [                     141..142    9:5  
+Integer          0                     142..143    9:6  
+RightBracket     ]                     143..144    9:7  
+Comma            ,                     144..145    9:8  
+Identifier       q                     145..146    9:9  
+LeftBracket      [                     146..147    9:10 
+Integer          1                     147..148    9:11 
+RightBracket     ]                     148..149    9:12 
+Semicolon        ;                     149..150    9:13 
+Measure          measure               177..184   10:1  
+Identifier       q                     185..186   10:9  
+LeftBracket      [                     186..187   10:10 
+Integer          0                     187..188   10:11 
+RightBracket     ]                     188..189   10:12 
+Arrow            ->                    192..194   10:16 
+Identifier       c                     197..198   10:21 
+LeftBracket      [                     198..199   10:22 
+Integer          0                     199..200   10:23 
+RightBracket     ]                     200..201   10:24 
+Semicolon        ;                     202..203   10:26 
+
+================================================================================
+
+Program 14: Deep Parenthesized Expression
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[1];
+creg c[1];
+u1(((pi/2) + (pi/4)) * (2 - 1)) q[0];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          1                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          1                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       u1                     58..60     5:1  
+LeftParen        (                      60..61     5:3  
+LeftParen        (                      61..62     5:4  
+LeftParen        (                      62..63     5:5  
+Pi               pi                     63..65     5:6  
+Slash            /                      65..66     5:8  
+Integer          2                      66..67     5:9  
+RightParen       )                      67..68     5:10 
+Plus             +                      69..70     5:12 
+LeftParen        (                      71..72     5:14 
+Pi               pi                     72..74     5:15 
+Slash            /                      74..75     5:17 
+Integer          4                      75..76     5:18 
+RightParen       )                      76..77     5:19 
+RightParen       )                      77..78     5:20 
+Star             *                      79..80     5:22 
+LeftParen        (                      81..82     5:24 
+Integer          2                      82..83     5:25 
+Minus            -                      84..85     5:27 
+Integer          1                      86..87     5:29 
+RightParen       )                      87..88     5:30 
+RightParen       )                      88..89     5:31 
+Identifier       q                      90..91     5:33 
+LeftBracket      [                      91..92     5:34 
+Integer          0                      92..93     5:35 
+RightBracket     ]                      93..94     5:36 
+Semicolon        ;                      94..95     5:37 
+Measure          measure                96..103    6:1  
+Identifier       q                     104..105    6:9  
+LeftBracket      [                     105..106    6:10 
+Integer          0                     106..107    6:11 
+RightBracket     ]                     107..108    6:12 
+Arrow            ->                    109..111    6:14 
+Identifier       c                     112..113    6:17 
+LeftBracket      [                     113..114    6:18 
+Integer          0                     114..115    6:19 
+RightBracket     ]                     115..116    6:20 
+Semicolon        ;                     116..117    6:21 
+
+================================================================================
+
+Program 15: Multiple Gate Definitions
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+gate bell a, b {
+    h a;
+    cx a, b;
+}
+gate unbell a, b {
+    cx a, b;
+    h a;
+}
+qreg q[2];
+creg c[2];
+bell q[0], q[1];
+unbell q[0], q[1];
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+Gate             gate                   36..40     3:1  
+Identifier       bell                   41..45     3:6  
+Identifier       a                      46..47     3:11 
+Comma            ,                      47..48     3:12 
+Identifier       b                      49..50     3:14 
+LeftBrace        {                      51..52     3:16 
+Identifier       h                      57..58     4:5  
+Identifier       a                      59..60     4:7  
+Semicolon        ;                      60..61     4:8  
+Identifier       cx                     66..68     5:5  
+Identifier       a                      69..70     5:8  
+Comma            ,                      70..71     5:9  
+Identifier       b                      72..73     5:11 
+Semicolon        ;                      73..74     5:12 
+RightBrace       }                      75..76     6:1  
+Gate             gate                   77..81     7:1  
+Identifier       unbell                 82..88     7:6  
+Identifier       a                      89..90     7:13 
+Comma            ,                      90..91     7:14 
+Identifier       b                      92..93     7:16 
+LeftBrace        {                      94..95     7:18 
+Identifier       cx                    100..102    8:5  
+Identifier       a                     103..104    8:8  
+Comma            ,                     104..105    8:9  
+Identifier       b                     106..107    8:11 
+Semicolon        ;                     107..108    8:12 
+Identifier       h                     113..114    9:5  
+Identifier       a                     115..116    9:7  
+Semicolon        ;                     116..117    9:8  
+RightBrace       }                     118..119   10:1  
+QReg             qreg                  120..124   11:1  
+Identifier       q                     125..126   11:6  
+LeftBracket      [                     126..127   11:7  
+Integer          2                     127..128   11:8  
+RightBracket     ]                     128..129   11:9  
+Semicolon        ;                     129..130   11:10 
+CReg             creg                  131..135   12:1  
+Identifier       c                     136..137   12:6  
+LeftBracket      [                     137..138   12:7  
+Integer          2                     138..139   12:8  
+RightBracket     ]                     139..140   12:9  
+Semicolon        ;                     140..141   12:10 
+Identifier       bell                  142..146   13:1  
+Identifier       q                     147..148   13:6  
+LeftBracket      [                     148..149   13:7  
+Integer          0                     149..150   13:8  
+RightBracket     ]                     150..151   13:9  
+Comma            ,                     151..152   13:10 
+Identifier       q                     153..154   13:12 
+LeftBracket      [                     154..155   13:13 
+Integer          1                     155..156   13:14 
+RightBracket     ]                     156..157   13:15 
+Semicolon        ;                     157..158   13:16 
+Identifier       unbell                159..165   14:1  
+Identifier       q                     166..167   14:8  
+LeftBracket      [                     167..168   14:9  
+Integer          0                     168..169   14:10 
+RightBracket     ]                     169..170   14:11 
+Comma            ,                     170..171   14:12 
+Identifier       q                     172..173   14:14 
+LeftBracket      [                     173..174   14:15 
+Integer          1                     174..175   14:16 
+RightBracket     ]                     175..176   14:17 
+Semicolon        ;                     176..177   14:18 
+Measure          measure               178..185   15:1  
+Identifier       q                     186..187   15:9  
+LeftBracket      [                     187..188   15:10 
+Integer          0                     188..189   15:11 
+RightBracket     ]                     189..190   15:12 
+Arrow            ->                    191..193   15:14 
+Identifier       c                     194..195   15:17 
+LeftBracket      [                     195..196   15:18 
+Integer          0                     196..197   15:19 
+RightBracket     ]                     197..198   15:20 
+Semicolon        ;                     198..199   15:21 
+Measure          measure               200..207   16:1  
+Identifier       q                     208..209   16:9  
+LeftBracket      [                     209..210   16:10 
+Integer          1                     210..211   16:11 
+RightBracket     ]                     211..212   16:12 
+Arrow            ->                    213..215   16:14 
+Identifier       c                     216..217   16:17 
+LeftBracket      [                     217..218   16:18 
+Integer          1                     218..219   16:19 
+RightBracket     ]                     219..220   16:20 
+Semicolon        ;                     220..221   16:21 
+
+================================================================================
+
+Program 16: QFT Three Qubit
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[3];
+creg c[3];
+h q[0];
+cu1(pi/2) q[1], q[0];
+cu1(pi/4) q[2], q[0];
+h q[1];
+cu1(pi/2) q[2], q[1];
+h q[2];
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+measure q[2] -> c[2];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          3                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          3                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       h                      58..59     5:1  
+Identifier       q                      60..61     5:3  
+LeftBracket      [                      61..62     5:4  
+Integer          0                      62..63     5:5  
+RightBracket     ]                      63..64     5:6  
+Semicolon        ;                      64..65     5:7  
+Identifier       cu1                    66..69     6:1  
+LeftParen        (                      69..70     6:4  
+Pi               pi                     70..72     6:5  
+Slash            /                      72..73     6:7  
+Integer          2                      73..74     6:8  
+RightParen       )                      74..75     6:9  
+Identifier       q                      76..77     6:11 
+LeftBracket      [                      77..78     6:12 
+Integer          1                      78..79     6:13 
+RightBracket     ]                      79..80     6:14 
+Comma            ,                      80..81     6:15 
+Identifier       q                      82..83     6:17 
+LeftBracket      [                      83..84     6:18 
+Integer          0                      84..85     6:19 
+RightBracket     ]                      85..86     6:20 
+Semicolon        ;                      86..87     6:21 
+Identifier       cu1                    88..91     7:1  
+LeftParen        (                      91..92     7:4  
+Pi               pi                     92..94     7:5  
+Slash            /                      94..95     7:7  
+Integer          4                      95..96     7:8  
+RightParen       )                      96..97     7:9  
+Identifier       q                      98..99     7:11 
+LeftBracket      [                      99..100    7:12 
+Integer          2                     100..101    7:13 
+RightBracket     ]                     101..102    7:14 
+Comma            ,                     102..103    7:15 
+Identifier       q                     104..105    7:17 
+LeftBracket      [                     105..106    7:18 
+Integer          0                     106..107    7:19 
+RightBracket     ]                     107..108    7:20 
+Semicolon        ;                     108..109    7:21 
+Identifier       h                     110..111    8:1  
+Identifier       q                     112..113    8:3  
+LeftBracket      [                     113..114    8:4  
+Integer          1                     114..115    8:5  
+RightBracket     ]                     115..116    8:6  
+Semicolon        ;                     116..117    8:7  
+Identifier       cu1                   118..121    9:1  
+LeftParen        (                     121..122    9:4  
+Pi               pi                    122..124    9:5  
+Slash            /                     124..125    9:7  
+Integer          2                     125..126    9:8  
+RightParen       )                     126..127    9:9  
+Identifier       q                     128..129    9:11 
+LeftBracket      [                     129..130    9:12 
+Integer          2                     130..131    9:13 
+RightBracket     ]                     131..132    9:14 
+Comma            ,                     132..133    9:15 
+Identifier       q                     134..135    9:17 
+LeftBracket      [                     135..136    9:18 
+Integer          1                     136..137    9:19 
+RightBracket     ]                     137..138    9:20 
+Semicolon        ;                     138..139    9:21 
+Identifier       h                     140..141   10:1  
+Identifier       q                     142..143   10:3  
+LeftBracket      [                     143..144   10:4  
+Integer          2                     144..145   10:5  
+RightBracket     ]                     145..146   10:6  
+Semicolon        ;                     146..147   10:7  
+Measure          measure               148..155   11:1  
+Identifier       q                     156..157   11:9  
+LeftBracket      [                     157..158   11:10 
+Integer          0                     158..159   11:11 
+RightBracket     ]                     159..160   11:12 
+Arrow            ->                    161..163   11:14 
+Identifier       c                     164..165   11:17 
+LeftBracket      [                     165..166   11:18 
+Integer          0                     166..167   11:19 
+RightBracket     ]                     167..168   11:20 
+Semicolon        ;                     168..169   11:21 
+Measure          measure               170..177   12:1  
+Identifier       q                     178..179   12:9  
+LeftBracket      [                     179..180   12:10 
+Integer          1                     180..181   12:11 
+RightBracket     ]                     181..182   12:12 
+Arrow            ->                    183..185   12:14 
+Identifier       c                     186..187   12:17 
+LeftBracket      [                     187..188   12:18 
+Integer          1                     188..189   12:19 
+RightBracket     ]                     189..190   12:20 
+Semicolon        ;                     190..191   12:21 
+Measure          measure               192..199   13:1  
+Identifier       q                     200..201   13:9  
+LeftBracket      [                     201..202   13:10 
+Integer          2                     202..203   13:11 
+RightBracket     ]                     203..204   13:12 
+Arrow            ->                    205..207   13:14 
+Identifier       c                     208..209   13:17 
+LeftBracket      [                     209..210   13:18 
+Integer          2                     210..211   13:19 
+RightBracket     ]                     211..212   13:20 
+Semicolon        ;                     212..213   13:21 
+
+================================================================================
+
+Program 17: String Literal With Path
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+include "custom_gates/my_lib.inc";
+qreg q[1];
+creg c[1];
+x q[0];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+Include          include                36..43     3:1  
+StringLiteral    "custom_gates/my_lib.inc"   44..69     3:9  
+Semicolon        ;                      69..70     3:34 
+QReg             qreg                   71..75     4:1  
+Identifier       q                      76..77     4:6  
+LeftBracket      [                      77..78     4:7  
+Integer          1                      78..79     4:8  
+RightBracket     ]                      79..80     4:9  
+Semicolon        ;                      80..81     4:10 
+CReg             creg                   82..86     5:1  
+Identifier       c                      87..88     5:6  
+LeftBracket      [                      88..89     5:7  
+Integer          1                      89..90     5:8  
+RightBracket     ]                      90..91     5:9  
+Semicolon        ;                      91..92     5:10 
+Identifier       x                      93..94     6:1  
+Identifier       q                      95..96     6:3  
+LeftBracket      [                      96..97     6:4  
+Integer          0                      97..98     6:5  
+RightBracket     ]                      98..99     6:6  
+Semicolon        ;                      99..100    6:7  
+Measure          measure               101..108    7:1  
+Identifier       q                     109..110    7:9  
+LeftBracket      [                     110..111    7:10 
+Integer          0                     111..112    7:11 
+RightBracket     ]                     112..113    7:12 
+Arrow            ->                    114..116    7:14 
+Identifier       c                     117..118    7:17 
+LeftBracket      [                     118..119    7:18 
+Integer          0                     119..120    7:19 
+RightBracket     ]                     120..121    7:20 
+Semicolon        ;                     121..122    7:21 
+
+================================================================================
+
+Program 18: U Gate Family
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[1];
+creg c[1];
+u1(pi/2) q[0];
+u2(0, pi) q[0];
+u3(pi/2, 0, pi) q[0];
+U(pi/4, pi/8, pi/16) q[0];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          1                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          1                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       u1                     58..60     5:1  
+LeftParen        (                      60..61     5:3  
+Pi               pi                     61..63     5:4  
+Slash            /                      63..64     5:6  
+Integer          2                      64..65     5:7  
+RightParen       )                      65..66     5:8  
+Identifier       q                      67..68     5:10 
+LeftBracket      [                      68..69     5:11 
+Integer          0                      69..70     5:12 
+RightBracket     ]                      70..71     5:13 
+Semicolon        ;                      71..72     5:14 
+Identifier       u2                     73..75     6:1  
+LeftParen        (                      75..76     6:3  
+Integer          0                      76..77     6:4  
+Comma            ,                      77..78     6:5  
+Pi               pi                     79..81     6:7  
+RightParen       )                      81..82     6:9  
+Identifier       q                      83..84     6:11 
+LeftBracket      [                      84..85     6:12 
+Integer          0                      85..86     6:13 
+RightBracket     ]                      86..87     6:14 
+Semicolon        ;                      87..88     6:15 
+Identifier       u3                     89..91     7:1  
+LeftParen        (                      91..92     7:3  
+Pi               pi                     92..94     7:4  
+Slash            /                      94..95     7:6  
+Integer          2                      95..96     7:7  
+Comma            ,                      96..97     7:8  
+Integer          0                      98..99     7:10 
+Comma            ,                      99..100    7:11 
+Pi               pi                    101..103    7:13 
+RightParen       )                     103..104    7:15 
+Identifier       q                     105..106    7:17 
+LeftBracket      [                     106..107    7:18 
+Integer          0                     107..108    7:19 
+RightBracket     ]                     108..109    7:20 
+Semicolon        ;                     109..110    7:21 
+Identifier       U                     111..112    8:1  
+LeftParen        (                     112..113    8:2  
+Pi               pi                    113..115    8:3  
+Slash            /                     115..116    8:5  
+Integer          4                     116..117    8:6  
+Comma            ,                     117..118    8:7  
+Pi               pi                    119..121    8:9  
+Slash            /                     121..122    8:11 
+Integer          8                     122..123    8:12 
+Comma            ,                     123..124    8:13 
+Pi               pi                    125..127    8:15 
+Slash            /                     127..128    8:17 
+Integer          16                    128..130    8:18 
+RightParen       )                     130..131    8:20 
+Identifier       q                     132..133    8:22 
+LeftBracket      [                     133..134    8:23 
+Integer          0                     134..135    8:24 
+RightBracket     ]                     135..136    8:25 
+Semicolon        ;                     136..137    8:26 
+Measure          measure               138..145    9:1  
+Identifier       q                     146..147    9:9  
+LeftBracket      [                     147..148    9:10 
+Integer          0                     148..149    9:11 
+RightBracket     ]                     149..150    9:12 
+Arrow            ->                    151..153    9:14 
+Identifier       c                     154..155    9:17 
+LeftBracket      [                     155..156    9:18 
+Integer          0                     156..157    9:19 
+RightBracket     ]                     157..158    9:20 
+Semicolon        ;                     158..159    9:21 
+
+================================================================================
+
+Program 19: Multiple If Statements
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[3];
+creg c[3];
+h q[0];
+h q[1];
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+if(c==1) x q[2];
+if(c==2) z q[2];
+if(c==3) y q[2];
+measure q[2] -> c[2];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          3                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          3                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       h                      58..59     5:1  
+Identifier       q                      60..61     5:3  
+LeftBracket      [                      61..62     5:4  
+Integer          0                      62..63     5:5  
+RightBracket     ]                      63..64     5:6  
+Semicolon        ;                      64..65     5:7  
+Identifier       h                      66..67     6:1  
+Identifier       q                      68..69     6:3  
+LeftBracket      [                      69..70     6:4  
+Integer          1                      70..71     6:5  
+RightBracket     ]                      71..72     6:6  
+Semicolon        ;                      72..73     6:7  
+Measure          measure                74..81     7:1  
+Identifier       q                      82..83     7:9  
+LeftBracket      [                      83..84     7:10 
+Integer          0                      84..85     7:11 
+RightBracket     ]                      85..86     7:12 
+Arrow            ->                     87..89     7:14 
+Identifier       c                      90..91     7:17 
+LeftBracket      [                      91..92     7:18 
+Integer          0                      92..93     7:19 
+RightBracket     ]                      93..94     7:20 
+Semicolon        ;                      94..95     7:21 
+Measure          measure                96..103    8:1  
+Identifier       q                     104..105    8:9  
+LeftBracket      [                     105..106    8:10 
+Integer          1                     106..107    8:11 
+RightBracket     ]                     107..108    8:12 
+Arrow            ->                    109..111    8:14 
+Identifier       c                     112..113    8:17 
+LeftBracket      [                     113..114    8:18 
+Integer          1                     114..115    8:19 
+RightBracket     ]                     115..116    8:20 
+Semicolon        ;                     116..117    8:21 
+If               if                    118..120    9:1  
+LeftParen        (                     120..121    9:3  
+Identifier       c                     121..122    9:4  
+EqualEqual       ==                    122..124    9:5  
+Integer          1                     124..125    9:7  
+RightParen       )                     125..126    9:8  
+Identifier       x                     127..128    9:10 
+Identifier       q                     129..130    9:12 
+LeftBracket      [                     130..131    9:13 
+Integer          2                     131..132    9:14 
+RightBracket     ]                     132..133    9:15 
+Semicolon        ;                     133..134    9:16 
+If               if                    135..137   10:1  
+LeftParen        (                     137..138   10:3  
+Identifier       c                     138..139   10:4  
+EqualEqual       ==                    139..141   10:5  
+Integer          2                     141..142   10:7  
+RightParen       )                     142..143   10:8  
+Identifier       z                     144..145   10:10 
+Identifier       q                     146..147   10:12 
+LeftBracket      [                     147..148   10:13 
+Integer          2                     148..149   10:14 
+RightBracket     ]                     149..150   10:15 
+Semicolon        ;                     150..151   10:16 
+If               if                    152..154   11:1  
+LeftParen        (                     154..155   11:3  
+Identifier       c                     155..156   11:4  
+EqualEqual       ==                    156..158   11:5  
+Integer          3                     158..159   11:7  
+RightParen       )                     159..160   11:8  
+Identifier       y                     161..162   11:10 
+Identifier       q                     163..164   11:12 
+LeftBracket      [                     164..165   11:13 
+Integer          2                     165..166   11:14 
+RightBracket     ]                     166..167   11:15 
+Semicolon        ;                     167..168   11:16 
+Measure          measure               169..176   12:1  
+Identifier       q                     177..178   12:9  
+LeftBracket      [                     178..179   12:10 
+Integer          2                     179..180   12:11 
+RightBracket     ]                     180..181   12:12 
+Arrow            ->                    182..184   12:14 
+Identifier       c                     185..186   12:17 
+LeftBracket      [                     186..187   12:18 
+Integer          2                     187..188   12:19 
+RightBracket     ]                     188..189   12:20 
+Semicolon        ;                     189..190   12:21 
+
+================================================================================
+
+Program 20: Recursive-Style Gate Composition
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+gate layer1 a { h a; t a; }
+gate layer2 a { layer1 a; layer1 a; }
+qreg q[1];
+creg c[1];
+layer2 q[0];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+Gate             gate                   36..40     3:1  
+Identifier       layer1                 41..47     3:6  
+Identifier       a                      48..49     3:13 
+LeftBrace        {                      50..51     3:15 
+Identifier       h                      52..53     3:17 
+Identifier       a                      54..55     3:19 
+Semicolon        ;                      55..56     3:20 
+Identifier       t                      57..58     3:22 
+Identifier       a                      59..60     3:24 
+Semicolon        ;                      60..61     3:25 
+RightBrace       }                      62..63     3:27 
+Gate             gate                   64..68     4:1  
+Identifier       layer2                 69..75     4:6  
+Identifier       a                      76..77     4:13 
+LeftBrace        {                      78..79     4:15 
+Identifier       layer1                 80..86     4:17 
+Identifier       a                      87..88     4:24 
+Semicolon        ;                      88..89     4:25 
+Identifier       layer1                 90..96     4:27 
+Identifier       a                      97..98     4:34 
+Semicolon        ;                      98..99     4:35 
+RightBrace       }                     100..101    4:37 
+QReg             qreg                  102..106    5:1  
+Identifier       q                     107..108    5:6  
+LeftBracket      [                     108..109    5:7  
+Integer          1                     109..110    5:8  
+RightBracket     ]                     110..111    5:9  
+Semicolon        ;                     111..112    5:10 
+CReg             creg                  113..117    6:1  
+Identifier       c                     118..119    6:6  
+LeftBracket      [                     119..120    6:7  
+Integer          1                     120..121    6:8  
+RightBracket     ]                     121..122    6:9  
+Semicolon        ;                     122..123    6:10 
+Identifier       layer2                124..130    7:1  
+Identifier       q                     131..132    7:8  
+LeftBracket      [                     132..133    7:9  
+Integer          0                     133..134    7:10 
+RightBracket     ]                     134..135    7:11 
+Semicolon        ;                     135..136    7:12 
+Measure          measure               137..144    8:1  
+Identifier       q                     145..146    8:9  
+LeftBracket      [                     146..147    8:10 
+Integer          0                     147..148    8:11 
+RightBracket     ]                     148..149    8:12 
+Arrow            ->                    150..152    8:14 
+Identifier       c                     153..154    8:17 
+LeftBracket      [                     154..155    8:18 
+Integer          0                     155..156    8:19 
+RightBracket     ]                     156..157    8:20 
+Semicolon        ;                     157..158    8:21 
+
+================================================================================
+
+Program 21: Empty Gate Body
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+gate noop a {
+}
+qreg q[1];
+creg c[1];
+noop q[0];
+x q[0];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+Gate             gate                   36..40     3:1  
+Identifier       noop                   41..45     3:6  
+Identifier       a                      46..47     3:11 
+LeftBrace        {                      48..49     3:13 
+RightBrace       }                      50..51     4:1  
+QReg             qreg                   52..56     5:1  
+Identifier       q                      57..58     5:6  
+LeftBracket      [                      58..59     5:7  
+Integer          1                      59..60     5:8  
+RightBracket     ]                      60..61     5:9  
+Semicolon        ;                      61..62     5:10 
+CReg             creg                   63..67     6:1  
+Identifier       c                      68..69     6:6  
+LeftBracket      [                      69..70     6:7  
+Integer          1                      70..71     6:8  
+RightBracket     ]                      71..72     6:9  
+Semicolon        ;                      72..73     6:10 
+Identifier       noop                   74..78     7:1  
+Identifier       q                      79..80     7:6  
+LeftBracket      [                      80..81     7:7  
+Integer          0                      81..82     7:8  
+RightBracket     ]                      82..83     7:9  
+Semicolon        ;                      83..84     7:10 
+Identifier       x                      85..86     8:1  
+Identifier       q                      87..88     8:3  
+LeftBracket      [                      88..89     8:4  
+Integer          0                      89..90     8:5  
+RightBracket     ]                      90..91     8:6  
+Semicolon        ;                      91..92     8:7  
+Measure          measure                93..100    9:1  
+Identifier       q                     101..102    9:9  
+LeftBracket      [                     102..103    9:10 
+Integer          0                     103..104    9:11 
+RightBracket     ]                     104..105    9:12 
+Arrow            ->                    106..108    9:14 
+Identifier       c                     109..110    9:17 
+LeftBracket      [                     110..111    9:18 
+Integer          0                     111..112    9:19 
+RightBracket     ]                     112..113    9:20 
+Semicolon        ;                     113..114    9:21 
+
+================================================================================
+
+Program 22: Trig and Inverse Trig Mix
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[1];
+creg c[1];
+rx(asin(0.5)) q[0];
+ry(acos(-0.5)) q[0];
+rz(atan(1.0)) q[0];
+measure q[0] -> c[0];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          1                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          1                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       rx                     58..60     5:1  
+LeftParen        (                      60..61     5:3  
+Asin             asin                   61..65     5:4  
+LeftParen        (                      65..66     5:8  
+Real             0.5                    66..69     5:9  
+RightParen       )                      69..70     5:12 
+RightParen       )                      70..71     5:13 
+Identifier       q                      72..73     5:15 
+LeftBracket      [                      73..74     5:16 
+Integer          0                      74..75     5:17 
+RightBracket     ]                      75..76     5:18 
+Semicolon        ;                      76..77     5:19 
+Identifier       ry                     78..80     6:1  
+LeftParen        (                      80..81     6:3  
+Acos             acos                   81..85     6:4  
+LeftParen        (                      85..86     6:8  
+Minus            -                      86..87     6:9  
+Real             0.5                    87..90     6:10 
+RightParen       )                      90..91     6:13 
+RightParen       )                      91..92     6:14 
+Identifier       q                      93..94     6:16 
+LeftBracket      [                      94..95     6:17 
+Integer          0                      95..96     6:18 
+RightBracket     ]                      96..97     6:19 
+Semicolon        ;                      97..98     6:20 
+Identifier       rz                     99..101    7:1  
+LeftParen        (                     101..102    7:3  
+Atan             atan                  102..106    7:4  
+LeftParen        (                     106..107    7:8  
+Real             1.0                   107..110    7:9  
+RightParen       )                     110..111    7:12 
+RightParen       )                     111..112    7:13 
+Identifier       q                     113..114    7:15 
+LeftBracket      [                     114..115    7:16 
+Integer          0                     115..116    7:17 
+RightBracket     ]                     116..117    7:18 
+Semicolon        ;                     117..118    7:19 
+Measure          measure               119..126    8:1  
+Identifier       q                     127..128    8:9  
+LeftBracket      [                     128..129    8:10 
+Integer          0                     129..130    8:11 
+RightBracket     ]                     130..131    8:12 
+Arrow            ->                    132..134    8:14 
+Identifier       c                     135..136    8:17 
+LeftBracket      [                     136..137    8:18 
+Integer          0                     137..138    8:19 
+RightBracket     ]                     138..139    8:20 
+Semicolon        ;                     139..140    8:21 
+
+================================================================================
+
+Program 23: Large Register Indices
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[16];
+creg c[16];
+h q[0];
+cx q[0], q[15];
+cx q[7], q[8];
+measure q[0] -> c[0];
+measure q[15] -> c[15];
+
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          16                     43..45     3:8  
+RightBracket     ]                      45..46     3:10 
+Semicolon        ;                      46..47     3:11 
+CReg             creg                   48..52     4:1  
+Identifier       c                      53..54     4:6  
+LeftBracket      [                      54..55     4:7  
+Integer          16                     55..57     4:8  
+RightBracket     ]                      57..58     4:10 
+Semicolon        ;                      58..59     4:11 
+Identifier       h                      60..61     5:1  
+Identifier       q                      62..63     5:3  
+LeftBracket      [                      63..64     5:4  
+Integer          0                      64..65     5:5  
+RightBracket     ]                      65..66     5:6  
+Semicolon        ;                      66..67     5:7  
+Identifier       cx                     68..70     6:1  
+Identifier       q                      71..72     6:4  
+LeftBracket      [                      72..73     6:5  
+Integer          0                      73..74     6:6  
+RightBracket     ]                      74..75     6:7  
+Comma            ,                      75..76     6:8  
+Identifier       q                      77..78     6:10 
+LeftBracket      [                      78..79     6:11 
+Integer          15                     79..81     6:12 
+RightBracket     ]                      81..82     6:14 
+Semicolon        ;                      82..83     6:15 
+Identifier       cx                     84..86     7:1  
+Identifier       q                      87..88     7:4  
+LeftBracket      [                      88..89     7:5  
+Integer          7                      89..90     7:6  
+RightBracket     ]                      90..91     7:7  
+Comma            ,                      91..92     7:8  
+Identifier       q                      93..94     7:10 
+LeftBracket      [                      94..95     7:11 
+Integer          8                      95..96     7:12 
+RightBracket     ]                      96..97     7:13 
+Semicolon        ;                      97..98     7:14 
+Measure          measure                99..106    8:1  
+Identifier       q                     107..108    8:9  
+LeftBracket      [                     108..109    8:10 
+Integer          0                     109..110    8:11 
+RightBracket     ]                     110..111    8:12 
+Arrow            ->                    112..114    8:14 
+Identifier       c                     115..116    8:17 
+LeftBracket      [                     116..117    8:18 
+Integer          0                     117..118    8:19 
+RightBracket     ]                     118..119    8:20 
+Semicolon        ;                     119..120    8:21 
+Measure          measure               121..128    9:1  
+Identifier       q                     129..130    9:9  
+LeftBracket      [                     130..131    9:10 
+Integer          15                    131..133    9:11 
+RightBracket     ]                     133..134    9:13 
+Arrow            ->                    135..137    9:15 
+Identifier       c                     138..139    9:18 
+LeftBracket      [                     139..140    9:19 
+Integer          15                    140..142    9:20 
+RightBracket     ]                     142..143    9:22 
+Semicolon        ;                     143..144    9:23 
+
+================================================================================
+
+Program 24: No Trailing Newline Program
+================================================================================
+
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg q[1];
+creg c[1];
+x q[0];
+measure q[0] -> c[0];
+Kind             Lexeme               Span     Location
+------------------------------------------------------------
+OpenQasm         OPENQASM                0..8      1:1  
+Real             2.0                     9..12     1:10 
+Semicolon        ;                      12..13     1:13 
+Include          include                14..21     2:1  
+StringLiteral    "qelib1.inc"           22..34     2:9  
+Semicolon        ;                      34..35     2:21 
+QReg             qreg                   36..40     3:1  
+Identifier       q                      41..42     3:6  
+LeftBracket      [                      42..43     3:7  
+Integer          1                      43..44     3:8  
+RightBracket     ]                      44..45     3:9  
+Semicolon        ;                      45..46     3:10 
+CReg             creg                   47..51     4:1  
+Identifier       c                      52..53     4:6  
+LeftBracket      [                      53..54     4:7  
+Integer          1                      54..55     4:8  
+RightBracket     ]                      55..56     4:9  
+Semicolon        ;                      56..57     4:10 
+Identifier       x                      58..59     5:1  
+Identifier       q                      60..61     5:3  
+LeftBracket      [                      61..62     5:4  
+Integer          0                      62..63     5:5  
+RightBracket     ]                      63..64     5:6  
+Semicolon        ;                      64..65     5:7  
+Measure          measure                66..73     6:1  
+Identifier       q                      74..75     6:9  
+LeftBracket      [                      75..76     6:10 
+Integer          0                      76..77     6:11 
+RightBracket     ]                      77..78     6:12 
+Arrow            ->                     79..81     6:14 
+Identifier       c                      82..83     6:17 
+LeftBracket      [                      83..84     6:18 
+Integer          0                      84..85     6:19 
+RightBracket     ]                      85..86     6:20 
+Semicolon        ;                      86..87     6:21 
+
+================================================================================
+
